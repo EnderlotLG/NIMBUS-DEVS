@@ -1,0 +1,300 @@
+<html>
+  <head>
+    <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin="" />
+    <link
+      rel="stylesheet"
+      as="style"
+      onload="this.rel='stylesheet'"
+      href="https://fonts.googleapis.com/css2?display=swap&amp;family=Lexend%3Awght%40400%3B500%3B700%3B900&amp;family=Noto+Sans%3Awght%40400%3B500%3B700%3B900"
+    />
+
+    <title>NIMBUS BLOG-TUTOS</title>
+    <link rel="icon" type="image/x-icon" href="data:image/x-icon;base64," />
+
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  </head>
+  <body>
+    <div class="relative flex size-full min-h-screen flex-col bg-[#151320] dark group/design-root overflow-x-hidden" style='font-family: Lexend, "Noto Sans", sans-serif;'>
+      <div class="layout-container flex h-full grow flex-col">
+        <header class="flex items-center justify-between whitespace-nowrap border-b border-solid border-b-[#2c2942] px-10 py-3">
+          <div class="flex items-center gap-4 text-white">
+            <div class="size-4">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24px"
+                height="24px"
+                fill="currentColor"
+                viewBox="0 0 256 256"
+              >
+                <path
+                  d="M160,40A88.09,88.09,0,0,0,81.29,88.67,64,64,0,1,0,72,216h88a88,88,0,0,0,0-176Zm0,160H72a48,48,0,0,1,0-96c1.1,0,2.2,0,3.29.11A88,88,0,0,0,72,128a8,8,0,0,0,16,0,72,72,0,1,1,72,72Z"
+                ></path>
+              </svg>
+              </div>
+              <h2 class="text-white text-lg font-bold leading-tight tracking-[-0.015em]">Nimbus Devs</h2>
+            </div>
+            <div class="flex items-center gap-9">
+              <a class="text-white text-sm font-medium leading-normal" href="#">Home</a>
+              <a class="text-white text-sm font-medium leading-normal" href="#">About Us</a>
+              <a class="text-white text-sm font-medium leading-normal" href="#">Services</a>
+              <a class="text-white text-sm font-medium leading-normal" href="#">Blog/Tutorials</a>
+              <a class="text-white text-sm font-medium leading-normal" href="#">Community</a>
+              <a class="text-white text-sm font-medium leading-normal" href="#">Contact</a>
+            </div>
+          </div>
+          <div class="flex flex-1 justify-end gap-8">
+
+              <div class="flex w-full flex-1 items-stretch rounded-xl h-full">
+                <div
+                  class="text-[#9f9ac1] flex border-none bg-[#2c2942] items-center justify-center pl-4 rounded-l-xl border-r-0"
+                  data-icon="MagnifyingGlass"
+                  data-size="24px"
+                  data-weight="regular"
+                >
+
+                </div>
+
+           </div>
+          </div>
+        </header>
+        <div class="px-40 flex flex-1 justify-center py-5">
+          <div class="layout-content-container flex flex-col max-w-[960px] flex-1">
+            <div class="@container">
+              <div class="flex flex-col gap-6 px-4 py-10 @[480px]:gap-8 @[864px]:flex-row">
+                <div
+                  class="w-full bg-center bg-no-repeat aspect-video bg-cover rounded-xl @[480px]:h-auto @[480px]:min-w-[400px] @[864px]:w-full"
+                  style='background-image: url("https://iili.io/3oMPGXR.jpg");'
+                ></div>
+                <div class="flex flex-col gap-6 @[480px]:min-w-[400px] @[480px]:gap-8 @[864px]:justify-center">
+                  <div class="flex flex-col gap-2 text-left">
+                    <h1
+                      class="text-white text-4xl font-black leading-tight tracking-[-0.033em] @[480px]:text-5xl @[480px]:font-black @[480px]:leading-tight @[480px]:tracking-[-0.033em]"
+                    >
+                      Welcome to Blogs/Tutorials
+                    </h1>
+                    <h2 class="text-white text-sm font-normal leading-normal @[480px]:text-base @[480px]:font-normal @[480px]:leading-normal">
+                      Your go-to source for cloud technology, programming, and software development. Learn from industry experts, discover new tools, and stay up to date with the
+                      latest trends.
+                    </h2>
+                  </div>
+                  <label class="flex flex-col min-w-40 h-14 w-full max-w-[480px] @[480px]:h-16">
+                    <div class="flex w-full flex-1 items-stretch rounded-xl h-full">
+                      <div
+                        class="text-[#9f9ac1] flex border-none bg-[#2c2942] items-center justify-center pl-4 rounded-l-xl border-r-0"
+                        data-icon="MagnifyingGlass"
+                        data-size="20px"
+                        data-weight="regular"
+                      >
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20px" height="20px" fill="currentColor" viewBox="0 0 256 256">
+                          <path
+                            d="M229.66,218.34l-50.07-50.06a88.11,88.11,0,1,0-11.31,11.31l50.06,50.07a8,8,0,0,0,11.32-11.32ZM40,112a72,72,0,1,1,72,72A72.08,72.08,0,0,1,40,112Z"
+                          ></path>
+                        </svg>
+                      </div>
+                      <input
+                        placeholder="Search articles, guides, and more"
+                        class="form-input flex w-full min-w-0 flex-1 resize-none overflow-hidden rounded-xl text-white focus:outline-0 focus:ring-0 border-none bg-[#2c2942] focus:border-none h-full placeholder:text-[#9f9ac1] px-4 rounded-r-none border-r-0 pr-2 rounded-l-none border-l-0 pl-2 text-sm font-normal leading-normal @[480px]:text-base @[480px]:font-normal @[480px]:leading-normal"
+                        value=""
+                      />
+                      <div class="flex items-center justify-center rounded-r-xl border-l-0 border-none bg-[#2c2942] pr-2">
+                        <button
+                          class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-full h-10 px-4 @[480px]:h-12 @[480px]:px-5 bg-[#150f3c] text-white text-sm font-bold leading-normal tracking-[0.015em] @[480px]:text-base @[480px]:font-bold @[480px]:leading-normal @[480px]:tracking-[0.015em]"
+                        >
+                          <span class="truncate">Search</span>
+                        </button>
+                      </div>
+                    </div>
+                  </label>
+                </div>
+              </div>
+            </div>
+            <h2 class="text-white text-[22px] font-bold leading-tight tracking-[-0.015em] px-4 pb-3 pt-5">Trending articles &amp; guides</h2>
+            <div class="p-4">
+              <div class="flex items-stretch justify-between gap-4 rounded-xl bg-[#201d2f] p-4 shadow-[0_0_4px_rgba(0,0,0,0.1)]">
+                <div class="flex flex-[2_2_0px] flex-col gap-4">
+                  <div class="flex flex-col gap-1">
+                    <p class="text-[#9f9ac1] text-sm font-normal leading-normal">AWS</p>
+                    <p class="text-white text-base font-bold leading-tight">How to Set Up an AWS Environment</p>
+                    <p class="text-[#9f9ac1] text-sm font-normal leading-normal">Learn how to create an AWS account, set up IAM users, and configure the necessary permissions.</p>
+                  </div>
+                  <button
+                    class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-full h-8 px-4 flex-row-reverse bg-[#2c2942] text-white text-sm font-medium leading-normal w-fit"
+                    onclick="window.open('https://aws.amazon.com/es/getting-started/guides/setup-environment/', '_blank')"
+                    class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-full h-10 px-4 @[480px]:h-12 @[480px]:px-5 bg-[#150f3c] text-white text-sm font-bold leading-normal tracking-[0.015em] @[480px]:text-base @[480px]:font-bold @[480px]:leading-normal @[480px]:tracking-[0.015em]"
+                  >
+                    <span class="truncate">Read more</span>
+                  </button>
+                </div>
+                <div
+                  class="w-full bg-center bg-no-repeat aspect-video bg-cover rounded-xl flex-1"
+                  style='background-image: url("https://iili.io/3oMiWjj.jpg");'
+                ></div>
+              </div>
+            </div>
+            <div class="p-4">
+              <div class="flex items-stretch justify-between gap-4 rounded-xl bg-[#201d2f] p-4 shadow-[0_0_4px_rgba(0,0,0,0.1)]">
+                <div class="flex flex-[2_2_0px] flex-col gap-4">
+                  <div class="flex flex-col gap-1">
+                    <p class="text-[#9f9ac1] text-sm font-normal leading-normal">Databases</p>
+                    <p class="text-white text-base font-bold leading-tight">A Beginner's Guide to SQL Databases</p>
+                    <p class="text-[#9f9ac1] text-sm font-normal leading-normal">Discover the basics of SQL databases, including data types, queries, and common operations.</p>
+                  </div>
+                  <button
+
+                    class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-full h-8 px-4 flex-row-reverse bg-[#2c2942] text-white text-sm font-medium leading-normal w-fit"
+                    class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-full h-8 px-4 flex-row-reverse bg-[#2c2942] text-white text-sm font-medium leading-normal w-fit"
+                    onclick="window.open('https://learntocodewith.me/posts/sql-guide/', '_blank')"
+                  >
+                    <span class="truncate">Read more</span>
+                  </button>
+                </div>
+                <div
+                  class="w-full bg-center bg-no-repeat aspect-video bg-cover rounded-xl flex-1"
+                  style='background-image: url("https://iili.io/3oMLoen.jpg");'
+                ></div>
+              </div>
+            </div>
+            <div class="p-4">
+              <div class="flex items-stretch justify-between gap-4 rounded-xl bg-[#201d2f] p-4 shadow-[0_0_4px_rgba(0,0,0,0.1)]">
+                <div class="flex flex-[2_2_0px] flex-col gap-4">
+                  <div class="flex flex-col gap-1">
+                    <p class="text-[#9f9ac1] text-sm font-normal leading-normal">Python</p>
+                    <p class="text-white text-base font-bold leading-tight">Building a Web Application with Flask</p>
+                    <p class="text-[#9f9ac1] text-sm font-normal leading-normal">
+                      Follow our step-by-step tutorial to create a simple web app using the Flask framework in Python.
+                    </p>
+                  </div>
+                  <button
+                    class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-full h-8 px-4 flex-row-reverse bg-[#2c2942] text-white text-sm font-medium leading-normal w-fit"
+                    onclick="window.open('https://realpython.com/flask-project/', '_blank')"
+                    class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-full h-10 px-4 @[480px]:h-12 @[480px]:px-5 bg-[#150f3c] text-white text-sm font-bold leading-normal tracking-[0.015em] @[480px]:text-base @[480px]:font-bold @[480px]:leading-normal @[480px]:tracking-[0.015em]"
+                  >
+                    <span class="truncate">Read more</span>
+                  </button>
+                </div>
+                <div
+                  class="w-full bg-center bg-no-repeat aspect-video bg-cover rounded-xl flex-1"
+                  style='background-image: url("https://iili.io/3oMQRja.jpg");'
+                ></div>
+              </div>
+            </div>
+            <div class="p-4">
+              <div class="flex items-stretch justify-between gap-4 rounded-xl bg-[#201d2f] p-4 shadow-[0_0_4px_rgba(0,0,0,0.1)]">
+                <div class="flex flex-[2_2_0px] flex-col gap-4">
+                  <div class="flex flex-col gap-1">
+                    <p class="text-[#9f9ac1] text-sm font-normal leading-normal">TensorFlow</p>
+                    <p class="text-white text-base font-bold leading-tight">Getting Started with TensorFlow 2.0</p>
+                    <p class="text-[#9f9ac1] text-sm font-normal leading-normal">
+                      Learn the basics of deep learning and neural networks with TensorFlow 2.0, Google's open-source machine learning library.
+                    </p>
+                  </div>
+                  <button
+                    class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-full h-8 px-4 flex-row-reverse bg-[#2c2942] text-white text-sm font-medium leading-normal w-fit"
+                    onclick="window.open('https://medium.com/data-science/a-comprehensive-introduction-to-tensorflows-sequential-api-and-model-for-deep-learning-c5e31aee49fa', '_blank')"
+                    class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-full h-10 px-4 @[480px]:h-12 @[480px]:px-5 bg-[#150f3c] text-white text-sm font-bold leading-normal tracking-[0.015em] @[480px]:text-base @[480px]:font-bold @[480px]:leading-normal @[480px]:tracking-[0.015em]"
+                  >
+                    <span class="truncate">Read more</span>
+                  </button>
+                </div>
+                <div
+                  class="w-full bg-center bg-no-repeat aspect-video bg-cover rounded-xl flex-1"
+                  style='background-image: url("https://iili.io/3oMZ0Vj.jpg");'
+                ></div>
+              </div>
+            </div>
+            <h2 class="text-white text-[22px] font-bold leading-tight tracking-[-0.015em] px-4 pb-3 pt-5">Browse by topic</h2>
+            <div class="flex gap-3 p-3 overflow-x-hidden">
+              <div class="flex h-8 shrink-0 items-center justify-center gap-x-2 rounded-full bg-[#2c2942] pl-4 pr-4">
+                <p class="text-white text-sm font-medium leading-normal">JavaScript</p>
+              </div>
+              <div class="flex h-8 shrink-0 items-center justify-center gap-x-2 rounded-full bg-[#2c2942] pl-4 pr-4">
+                <p class="text-white text-sm font-medium leading-normal">React</p>
+              </div>
+              <div class="flex h-8 shrink-0 items-center justify-center gap-x-2 rounded-full bg-[#2c2942] pl-4 pr-4">
+                <p class="text-white text-sm font-medium leading-normal">Node.js</p>
+              </div>
+              <div class="flex h-8 shrink-0 items-center justify-center gap-x-2 rounded-full bg-[#2c2942] pl-4 pr-4">
+                <p class="text-white text-sm font-medium leading-normal">TypeScript</p>
+              </div>
+              <div class="flex h-8 shrink-0 items-center justify-center gap-x-2 rounded-full bg-[#2c2942] pl-4 pr-4">
+                <p class="text-white text-sm font-medium leading-normal">CSS</p>
+              </div>
+              <div class="flex h-8 shrink-0 items-center justify-center gap-x-2 rounded-full bg-[#2c2942] pl-4 pr-4">
+                <p class="text-white text-sm font-medium leading-normal">Vue.js</p>
+              </div>
+              <div class="flex h-8 shrink-0 items-center justify-center gap-x-2 rounded-full bg-[#2c2942] pl-4 pr-4">
+                <p class="text-white text-sm font-medium leading-normal">HTML</p>
+              </div>
+              <div class="flex h-8 shrink-0 items-center justify-center gap-x-2 rounded-full bg-[#2c2942] pl-4 pr-4">
+                <p class="text-white text-sm font-medium leading-normal">Angular</p>
+              </div>
+              <div class="flex h-8 shrink-0 items-center justify-center gap-x-2 rounded-full bg-[#2c2942] pl-4 pr-4">
+                <p class="text-white text-sm font-medium leading-normal">Express.js</p>
+              </div>
+              <div class="flex h-8 shrink-0 items-center justify-center gap-x-2 rounded-full bg-[#2c2942] pl-4 pr-4">
+                <p class="text-white text-sm font-medium leading-normal">Bootstrap</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Footer correctamente posicionado dentro de layout-container -->
+    <footer class="bg-[#151320] text-white py-6 mt-0 border-t border-[#2c2942]">
+      <div class="container mx-auto flex flex-col items-center justify-between px-6 md:flex-row">
+        <div class="flex gap-6">
+          <a
+            href="https://www.linkedin.com/in/fernando-gutierrez-s%C3%A1nchez-20407718b/"
+            target="_blank"
+            class="hover:opacity-80"
+          >
+            <img
+              src="https://cdn-icons-png.flaticon.com/512/174/174857.png"
+              alt="LinkedIn"
+              class="w-6 h-6"
+            />
+          </a>
+          <a
+            href="https://www.youtube.com/watch?v=Z4tsxrheEJw"
+            target="_blank"
+            class="hover:opacity-80"
+          >
+            <img
+              src="https://cdn-icons-png.flaticon.com/512/174/174883.png"
+              alt="YouTube"
+              class="w-6 h-6"
+            />
+          </a>
+          <a
+            href="https://www.instagram.com/ingeniebriofer/"
+            target="_blank"
+            class="hover:opacity-80"
+          >
+            <img
+              src="https://cdn-icons-png.flaticon.com/512/174/174855.png"
+              alt="Instagram"
+              class="w-6 h-6"
+            />
+          </a>
+          <!-- Agregar GitHub -->
+          <a
+            href="https://github.com/EnderlotLG"
+            target="_blank"
+            class="hover:opacity-80"
+          >
+            <img
+              src="https://cdn-icons-png.flaticon.com/512/25/25231.png"
+              alt="GitHub"
+              class="w-6 h-6"
+            />
+          </a>
+        </div>
+        <p class="mt-4 md:mt-0 text-sm text-[#9BACBB]">
+          Diseñado por <span class="font-semibold">Fernando Gtz</span> |
+          Powered by <span class="font-semibold">Neubox</span>
+        </p>
+      </div>
+    </footer>
+  </body>
+</html>
+

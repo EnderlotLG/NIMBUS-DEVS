@@ -1,0 +1,614 @@
+<!doctype html>
+<html lang="es">
+    <head>
+        <link
+            rel="preconnect"
+            href="https://fonts.gstatic.com/"
+            crossorigin=""
+        />
+        <link
+            rel="stylesheet"
+            as="style"
+            onload="this.rel='stylesheet'"
+            href="https://fonts.googleapis.com/css2?display=swap&amp;family=Lexend%3Awght%40400%3B500%3B700%3B900&amp;family=Noto+Sans%3Awght%40400%3B500%3B700%3B900"
+        />
+
+        <title>NIMBUS COMM</title>
+        <link
+            rel="icon"
+            type="image/svg+xml"
+            href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNTYiIGhlaWdodD0iMjU2IiB2aWV3Qm94PSIwIDAgMjU2IDI1NiI+PHBhdGggZmlsbD0iIzg4YWRmZiIgZD0iTTIyNi42NiAxMjguNjFhNjIuNjggNjIuNjggMCAwIDEtNjIuNjYgNjIuNjZIODguNTRhNjIuNjggNjIuNjggMCAwIDEtNjIuNjYtNjIuNjZhNjIuNjggNjIuNjggMCAwIDEgNjIuNjYtNjIuNjZoNzUuNDZhNjIuNjggNjIuNjggMCAwIDEgNjIuNjYgNjIuNjZaIiBvcGFjaXR5PSIuNiIvPjxwYXRoIGZpbGw9IiM1MzdlZmYiIGQ9Ik0xODkuNzQgNzQuNjloLTc1LjQ2YTU0LjY4IDU0LjY4IDAgMCAwLTU0LjY2IDU0LjY2YTU0LjY4IDU0LjY4IDAgMCAwIDU0LjY2IDU0LjY2aDc1LjQ2YTU0LjY4IDU0LjY4IDAgMCAwIDU0LjY2LTU0LjY2YTU0LjY4IDU0LjY4IDAgMCAwLTU0LjY2LTU0LjY2WiIgb3BhY2l0eT0iLjgiLz48cGF0aCBmaWxsPSIjMjQ1OGZmIiBkPSJNMTg5Ljc0IDg5LjY5aC03NS40NmE0MC42OCA0MC42OCAwIDAgMC00MC42NiA0MC42NmE0MC42OCA0MC42OCAwIDAgMCA0MC42NiA0MC42Nmg3NS40NmE0MC42OCA0MC42OCAwIDAgMCA0MC42Ni00MC42NmE0MC42OCA0MC42OCAwIDAgMC00MC42Ni00MC42NloiLz48L3N2Zz4="
+        />
+        <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+        <style>
+            .avatar-select {
+                cursor: pointer;
+                font-size: 2rem;
+                padding: 0.5rem;
+                transition: transform 0.2s;
+            }
+            .avatar-select.selected {
+                transform: scale(1.2);
+                border: 2px solid #8b5cf6;
+            }
+            .color-select {
+                width: 2rem;
+                height: 2rem;
+                border-radius: 50%;
+                cursor: pointer;
+                transition: transform 0.2s;
+            }
+            .color-select.selected {
+                transform: scale(1.2);
+                border: 2px solid white;
+            }
+        </style>
+    </head>
+    <body
+        class="relative flex size-full min-h-screen flex-col bg-[#151320] dark group/design-root overflow-x-hidden"
+        style="font-family: Lexend, &quot;Noto Sans&quot;, sans-serif"
+    >
+        <div class="layout-container flex h-full grow flex-col">
+            <!-- Header original -->
+            <header
+                class="flex items-center justify-between whitespace-nowrap border-b border-solid border-b-[#2c2942] px-10 py-3"
+            >
+                <div class="flex items-center gap-4 text-white">
+                    <div class="size-4">
+                        <svg
+                            viewBox="0 0 24 24"
+                            fill="none"
+                            xmlns="http://www.w3.org/2000/svg"
+                        >
+                            <path
+                                d="M19.35 10.04C18.67 6.59 15.84 4 12.5 4 9.46 4 6.86 6.13 6.08 9.09 4.01 9.69 2 11.5 2 13.52c0 2.51 2.01 4.5 4.5 4.5h13c2.49 0 4.5-2.01 4.5-4.50c0-2.20-1.78-3.95-3.99-4.48z"
+                                fill="currentColor"
+                            />
+                        </svg>
+                    </div>
+                    <h2
+                        class="text-white text-lg font-bold leading-tight tracking-[-0.015em]"
+                    >
+                        Nimbus Devs
+                    </h2>
+                </div>
+                <div class="flex flex-1 justify-end gap-8">
+                    <div class="flex items-center gap-9">
+                        <a
+                            class="text-white text-sm font-medium leading-normal"
+                            href="#"
+                            >Home</a
+                        >
+                        <a
+                            class="text-white text-sm font-medium leading-normal"
+                            href="#"
+                            >About Us</a
+                        >
+                        <a
+                            class="text-white text-sm font-medium leading-normal"
+                            href="#"
+                            >Services</a
+                        >
+                        <a
+                            class="text-white text-sm font-medium leading-normal"
+                            href="#"
+                            >Blog/Tutorials</a
+                        >
+                        <a
+                            class="text-white text-sm font-medium leading-normal"
+                            href="#"
+                            >Community</a
+                        >
+                        <a
+                            class="text-white text-sm font-medium leading-normal"
+                            href="#"
+                            >Contact</a
+                        >
+                    </div>
+                </div>
+            </header>
+            <!-- Contenido principal -->
+            <div class="px-40 flex flex-1 justify-center py-5">
+                <div
+                    class="layout-content-container flex flex-col max-w-[960px] flex-1"
+                >
+                    <!-- Nuevo Bloque de Comunidades y Blogs -->
+                    <div class="grid md:grid-cols-2 gap-6 mt-10">
+                        <!-- Sección de Comunidades -->
+                        <div class="bg-[#2c2942] rounded-lg p-6">
+                            <h2 class="text-2xl font-bold text-white mb-6">
+                                Únete a Nuestras Comunidades
+                            </h2>
+
+                            <div class="space-y-4">
+                                <!-- Tarjetas de comunidades -->
+                                <div
+                                    class="flex items-center bg-[#151320] p-4 rounded-lg"
+                                >
+                                    <img
+                                        src="https://iili.io/3nod59R.png"
+                                        alt="Discord"
+                                        class="w-12 h-12 mr-4 rounded-full"
+                                    />
+                                    <div class="flex-grow">
+                                        <h3 class="text-white font-semibold">
+                                            Discord Community
+                                        </h3>
+                                        <p class="text-sm text-gray-400">
+                                            Developers Network
+                                        </p>
+                                    </div>
+                                    <a
+                                        href="https://discord.gg"
+                                        target="_blank"
+                                        class="bg-purple-600 text-white px-4 py-2 rounded-full hover:bg-purple-700 transition duration-300"
+                                    >
+                                        Unirse
+                                    </a>
+                                </div>
+
+                                <div
+                                    class="flex items-center bg-[#151320] p-4 rounded-lg"
+                                >
+                                    <img
+                                        src="https://iili.io/3noKKf1.png"
+                                        alt="GitHub"
+                                        class="w-12 h-12 mr-4 rounded-full"
+                                    />
+                                    <div class="flex-grow">
+                                        <h3 class="text-white font-semibold">
+                                            Open Source
+                                        </h3>
+                                        <p class="text-sm text-gray-400">
+                                            Proyectos Colaborativos
+                                        </p>
+                                    </div>
+                                    <a
+                                        href="https://github.com"
+                                        target="_blank"
+                                        class="bg-green-600 text-white px-4 py-2 rounded-full hover:bg-green-700 transition duration-300"
+                                    >
+                                        Seguir
+                                    </a>
+                                </div>
+
+                                <div
+                                    class="flex items-center bg-[#151320] p-4 rounded-lg"
+                                >
+                                    <img
+                                        src="https://iili.io/3nnpnRI.png"
+                                        alt="AWS"
+                                        class="w-12 h-12 mr-4 rounded-full"
+                                    />
+                                    <div class="flex-grow">
+                                        <h3 class="text-white font-semibold">
+                                            AWS Community
+                                        </h3>
+                                        <p class="text-sm text-gray-400">
+                                            Cloud Computing
+                                        </p>
+                                    </div>
+                                    <a
+                                        href="https://aws.amazon.com/es/?nc2=h_lg"
+                                        target="_blank"
+                                        class="bg-orange-600 text-white px-4 py-2 rounded-full hover:bg-orange-700 transition duration-300"
+                                    >
+                                        Explorar
+                                    </a>
+                                </div>
+
+                                <div
+                                    class="flex items-center bg-[#151320] p-4 rounded-lg"
+                                >
+                                    <img
+                                        src="https://cdn-icons-png.flaticon.com/512/174/174848.png"
+                                        alt="Facebook"
+                                        class="w-12 h-12 mr-4 rounded-full"
+                                    />
+                                    <div class="flex-grow">
+                                        <h3 class="text-white font-semibold">
+                                            Grupos de Desarrolladores
+                                        </h3>
+                                        <p class="text-sm text-gray-400">
+                                            Networking
+                                        </p>
+                                    </div>
+                                    <a
+                                        href="https://www.facebook.com"
+                                        target="_blank"
+                                        class="bg-blue-600 text-white px-4 py-2 rounded-full hover:bg-blue-700 transition duration-300"
+                                    >
+                                        Conectar
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Sección de Blogs con Imágenes -->
+                        <div class="bg-[#2c2942] rounded-lg p-6">
+                            <h2 class="text-2xl font-bold text-white mb-6">
+                                Últimas Publicaciones
+                            </h2>
+
+                            <div class="space-y-4">
+                                <!-- Blog con Imagen Grande -->
+                                <div class="relative group">
+                                    <img
+                                        src="https://iili.io/3BGRrYl.jpg"
+                                        alt="Imagen Principal Blog"
+                                        class="w-full h-64 object-cover rounded-lg mb-4 transform group-hover:scale-105 transition-transform duration-300"
+                                    />
+                                    <div
+                                        class="absolute bottom-0 left-0 right-0 bg-black bg-opacity-50 p-4 rounded-b-lg"
+                                    >
+                                        <h3
+                                            class="text-white font-semibold text-lg"
+                                        >
+                                            React: Guía Completa en 2024
+                                        </h3>
+                                        <p class="text-gray-300 text-sm">
+                                            Desarrollo de Aplicaciones Modernas
+                                        </p>
+                                    </div>
+                                </div>
+
+                                <!-- Publicaciones con Miniaturas -->
+                                <div class="grid grid-cols-3 gap-4">
+                                    <div class="bg-[#151320] rounded-lg p-2">
+                                        <img
+                                            src="https://images.unsplash.com/photo-1633356122102-3fe601e05bd2"
+                                            alt="React Tutorial"
+                                            class="w-full h-20 object-cover rounded-lg mb-2"
+                                        />
+                                        <p
+                                            class="text-white text-xs text-center"
+                                        >
+                                            Hooks Avanzados
+                                        </p>
+                                    </div>
+                                    <div class="bg-[#151320] rounded-lg p-2">
+                                        <img
+                                            src="https://images.unsplash.com/photo-1542744173-8e7e53415bb0"
+                                            alt="React Performance"
+                                            class="w-full h-20 object-cover rounded-lg mb-2"
+                                        />
+                                        <p
+                                            class="text-white text-xs text-center"
+                                        >
+                                            Optimización
+                                        </p>
+                                    </div>
+                                    <div class="bg-[#151320] rounded-lg p-2">
+                                        <img
+                                            src="https://images.unsplash.com/photo-1587620962725-abab7fe55159"
+                                            alt="React State"
+                                            class="w-full h-20 object-cover rounded-lg mb-2"
+                                        />
+                                        <p
+                                            class="text-white text-xs text-center"
+                                        >
+                                            Gestión de Estado
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Sección de Comentarios del Blog -->
+                    <div class="bg-[#2c2942] rounded-lg mt-10">
+                        <div class="p-4 border-b border-[#151320]">
+                            <h2 class="text-2xl font-bold text-white">
+                                Chat live
+                            </h2>
+                        </div>
+
+                        <div
+                            id="commentsContainer"
+                            class="h-[400px] overflow-y-auto p-4 space-y-3"
+                        >
+                            <!-- Comentarios se insertarán aquí -->
+                        </div>
+
+                        <div class="p-4 border-t border-[#151320] flex">
+                            <button
+                                id="addCommentBtn"
+                                class="w-full bg-purple-600 text-white py-2 rounded-lg"
+                            >
+                                Comezar a chatear
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Modal de Configuración de Usuario -->
+        <div
+            id="userConfigModal"
+            class="fixed inset-0 bg-black bg-opacity-50 z-50 hidden items-center justify-center"
+        >
+            <div class="bg-[#2c2942] p-8 rounded-lg max-w-md w-full">
+                <h2 class="text-2xl font-bold text-white mb-6">
+                    Configurar Perfil
+                </h2>
+
+                <div class="mb-4">
+                    <label class="block text-white mb-2"
+                        >Nombre de Usuario</label
+                    >
+                    <input
+                        type="text"
+                        id="usernameInput"
+                        class="w-full p-2 bg-[#151320] text-white rounded"
+                        placeholder="Tu nombre de usuario"
+                    />
+                </div>
+
+                <div class="mb-4">
+                    <label class="block text-white mb-2">Elige tu Avatar</label>
+                    <div class="flex justify-center space-x-4">
+                        <div class="avatar-select" data-avatar="🚀">🚀</div>
+                        <div class="avatar-select" data-avatar="💻">💻</div>
+                        <div class="avatar-select" data-avatar="🤖">🤖</div>
+                        <div class="avatar-select" data-avatar="🌈">🌈</div>
+                    </div>
+                </div>
+
+                <div class="mb-4">
+                    <label class="block text-white mb-2"
+                        >Color de Nickname</label
+                    >
+                    <div class="flex justify-center space-x-4">
+                        <div
+                            class="color-select bg-purple-500"
+                            data-color="#8b5cf6"
+                        ></div>
+                        <div
+                            class="color-select bg-blue-500"
+                            data-color="#3b82f6"
+                        ></div>
+                        <div
+                            class="color-select bg-green-500"
+                            data-color="#10b981"
+                        ></div>
+                        <div
+                            class="color-select bg-red-500"
+                            data-color="#ef4444"
+                        ></div>
+                    </div>
+                </div>
+
+                <button
+                    id="saveUserConfig"
+                    class="w-full bg-purple-600 text-white py-2 rounded-lg hover:bg-purple-700"
+                >
+                    Guardar Configuración
+                </button>
+            </div>
+        </div>
+
+        <!-- Modal de Comentario -->
+        <div
+            id="commentModal"
+            class="fixed inset-0 bg-black bg-opacity-50 z-50 hidden items-center justify-center"
+        >
+            <div class="bg-[#2c2942] p-8 rounded-lg max-w-md w-full">
+                <h2 class="text-2xl font-bold text-white mb-6">Chat Live</h2>
+
+                <div class="mb-4">
+                    <label class="block text-white mb-2"
+                        >Comienza hablar con la comunidad</label
+                    >
+                    <textarea
+                        id="commentInput"
+                        class="w-full p-2 bg-[#151320] text-white rounded"
+                        placeholder="Escribe tu mensaje aquí"
+                        rows="4"
+                    ></textarea>
+                </div>
+
+                <button
+                    id="saveComment"
+                    class="w-full bg-purple-600 text-white py-2 rounded-lg hover:bg-purple-700"
+                >
+                    Iniciar Chat
+                </button>
+            </div>
+        </div>
+        -
+        <!-- Footer original -->
+        <footer class="bg-[#151320] text-white py-6 mt-0">
+            <div
+                class="container mx-auto flex flex-col items-center justify-between px-6 md:flex-row"
+            >
+                <div class="flex gap-6">
+                    <a
+                        href="https://www.linkedin.com/in/fernando-gutierrez-s%C3%A1nchez-20407718b/"
+                        target="_blank"
+                        class="hover:opacity-80"
+                    >
+                        <img
+                            src="https://cdn-icons-png.flaticon.com/512/174/174857.png"
+                            alt="LinkedIn"
+                            class="w-6 h-6"
+                        />
+                    </a>
+                    <a
+                        href="https://www.youtube.com/watch?v=Z4tsxrheEJw"
+                        target="_blank"
+                        class="hover:opacity-80"
+                    >
+                        <img
+                            src="https://cdn-icons-png.flaticon.com/512/174/174883.png"
+                            alt="YouTube"
+                            class="w-6 h-6"
+                        />
+                    </a>
+                    <a
+                        href="https://www.instagram.com/ingeniebriofer/"
+                        target="_blank"
+                        class="hover:opacity-80"
+                    >
+                        <img
+                            src="https://cdn-icons-png.flaticon.com/512/174/174855.png"
+                            alt="Instagram"
+                            class="w-6 h-6"
+                        />
+                    </a>
+                    <a
+                        href="https://github.com/EnderlotLG"
+                        target="_blank"
+                        class="hover:opacity-80"
+                    >
+                        <img
+                            src="https://cdn-icons-png.flaticon.com/512/25/25231.png"
+                            alt="GitHub"
+                            class="w-6 h-6"
+                        />
+                    </a>
+                </div>
+                <p class="mt-4 md:mt-0 text-sm text-[#9BACBB]">
+                    Diseñado por
+                    <span class="font-semibold">Fernando Gtz</span> | Powered by
+                    <span class="font-semibold">Neubox</span>
+                </p>
+            </div>
+        </footer>
+
+        <script>
+            // Variables globales para configuración de usuario
+            let currentUser = {
+                name: "",
+                avatar: "",
+                color: "",
+            };
+
+            // Inicialización de eventos
+            document.addEventListener("DOMContentLoaded", () => {
+                const userConfigModal =
+                    document.getElementById("userConfigModal");
+                const commentModal = document.getElementById("commentModal");
+                const usernameInput = document.getElementById("usernameInput");
+                const saveUserConfigBtn =
+                    document.getElementById("saveUserConfig");
+                const addCommentBtn = document.getElementById("addCommentBtn");
+                const saveCommentBtn = document.getElementById("saveComment");
+                const commentsContainer =
+                    document.getElementById("commentsContainer");
+                const commentInput = document.getElementById("commentInput");
+
+                // Selección de Avatar
+                document
+                    .querySelectorAll(".avatar-select")
+                    .forEach((avatar) => {
+                        avatar.addEventListener("click", function () {
+                            document
+                                .querySelectorAll(".avatar-select")
+                                .forEach((a) => a.classList.remove("selected"));
+                            this.classList.add("selected");
+                            currentUser.avatar =
+                                this.getAttribute("data-avatar");
+                        });
+                    });
+
+                // Selección de Color
+                document
+                    .querySelectorAll(".color-select")
+                    .forEach((colorEl) => {
+                        colorEl.addEventListener("click", function () {
+                            document
+                                .querySelectorAll(".color-select")
+                                .forEach((c) => c.classList.remove("selected"));
+                            this.classList.add("selected");
+                            currentUser.color = this.getAttribute("data-color");
+                        });
+                    });
+
+                // Guardar Configuración de Usuario
+                saveUserConfigBtn.addEventListener("click", () => {
+                    const username = usernameInput.value.trim();
+
+                    if (username && currentUser.avatar && currentUser.color) {
+                        currentUser.name = username;
+                        userConfigModal.classList.add("hidden");
+                        userConfigModal.classList.remove("flex");
+                    } else {
+                        alert("Por favor, completa todos los campos");
+                    }
+                });
+
+                // Abrir Modal de Comentario
+                addCommentBtn.addEventListener("click", () => {
+                    if (!currentUser.name) {
+                        userConfigModal.classList.remove("hidden");
+                        userConfigModal.classList.add("flex");
+                    } else {
+                        commentModal.classList.remove("hidden");
+                        commentModal.classList.add("flex");
+                    }
+                });
+
+                // Guardar Comentario
+                saveCommentBtn.addEventListener("click", () => {
+                    const commentText = commentInput.value.trim();
+
+                    if (commentText) {
+                        const commentElement = document.createElement("div");
+                        commentElement.classList.add(
+                            "bg-[#151320]",
+                            "p-4",
+                            "rounded-lg",
+                            "text-white",
+                            "mb-2",
+                            "flex",
+                            "items-start",
+                            "space-x-3",
+                        );
+
+                        commentElement.innerHTML = `
+                                        <div class="text-3xl">\${currentUser.avatar}</div>
+                                        <div class="flex-1">
+                                            <div class="flex justify-between items-center mb-2">
+                                                <span 
+                                                    class="font-bold" 
+                                                    style="color: \${currentUser.color};"
+                                                >
+                                                    \${currentUser.name}
+                                                </span>
+                                                <span class="text-xs text-gray-400">
+                                                    \${new Date().toLocaleTimeString()}
+                                                </span>
+                                            </div>
+                                            <p>\${commentText}</p>
+                                        </div>
+                                    `;
+
+                        // Añadir comentario al contenedor
+                        commentsContainer.appendChild(commentElement);
+
+                        // Scroll al último comentario
+                        commentsContainer.scrollTop =
+                            commentsContainer.scrollHeight;
+
+                        // Limpiar input y cerrar modal
+                        commentInput.value = "";
+                        commentModal.classList.add("hidden");
+                        commentModal.classList.remove("flex");
+                    }
+                });
+
+                // Cerrar modal de comentario
+                commentModal.addEventListener("click", (e) => {
+                    if (e.target === commentModal) {
+                        commentModal.classList.add("hidden");
+                        commentModal.classList.remove("flex");
+                    }
+                });
+
+                // Mostrar modal de configuración al cargar
+                userConfigModal.classList.remove("hidden");
+                userConfigModal.classList.add("flex");
+            });
+        </script>
+    </body>
+</html>
